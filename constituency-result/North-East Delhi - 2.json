@@ -1,0 +1,209 @@
+{
+  "code": "U052",
+  "name": "North-East Delhi - 2",
+  "candidates": [
+    {
+      "name": "MANOJ TIWARI",
+      "status": "leading",
+      "gap": 121453,
+      "voteCount": 651439,
+      "party": "Bharatiya Janata Party"
+    },
+    {
+      "name": "KANHAIYA KUMAR",
+      "status": "trailing",
+      "gap": -121453,
+      "voteCount": 529986,
+      "party": "Indian National Congress"
+    },
+    {
+      "name": "ASHOK KUMAR",
+      "status": "trailing",
+      "gap": -641210,
+      "voteCount": 10229,
+      "party": "Bahujan Samaj Party"
+    },
+    {
+      "name": "SUNITA",
+      "status": "trailing",
+      "gap": -648730,
+      "voteCount": 2709,
+      "party": "Navarang Congress Party"
+    },
+    {
+      "name": "AKESHAN DUT",
+      "status": "trailing",
+      "gap": -648869,
+      "voteCount": 2570,
+      "party": "Independent"
+    },
+    {
+      "name": "AJAY TIWARI",
+      "status": "trailing",
+      "gap": -649815,
+      "voteCount": 1624,
+      "party": "Right to Recall Party"
+    },
+    {
+      "name": "SUSHIL CHOUDHARY",
+      "status": "trailing",
+      "gap": -649855,
+      "voteCount": 1584,
+      "party": "Aapki Apni Party (Peoples)"
+    },
+    {
+      "name": "SUBHASH",
+      "status": "trailing",
+      "gap": -650209,
+      "voteCount": 1230,
+      "party": "Rashtriya Janmorcha"
+    },
+    {
+      "name": "AKASH SRIVASTAV",
+      "status": "trailing",
+      "gap": -650434,
+      "voteCount": 1005,
+      "party": "Jai Hind National Party"
+    },
+    {
+      "name": "SANJEEV KUMAR PANDEY",
+      "status": "trailing",
+      "gap": -650574,
+      "voteCount": 865,
+      "party": "Bharatiya Liberal Party"
+    },
+    {
+      "name": "SAROJ KUMAR RAY",
+      "status": "trailing",
+      "gap": -650723,
+      "voteCount": 716,
+      "party": "Independent"
+    },
+    {
+      "name": "ADV. BHIM KISHOR",
+      "status": "trailing",
+      "gap": -650792,
+      "voteCount": 647,
+      "party": "Peoples Party of India (Democratic)"
+    },
+    {
+      "name": "SANJEEV KUMAR",
+      "status": "trailing",
+      "gap": -650853,
+      "voteCount": 586,
+      "party": "Public Political Party"
+    },
+    {
+      "name": "PRAKASH DEVI",
+      "status": "trailing",
+      "gap": -650918,
+      "voteCount": 521,
+      "party": "Socialist Unity Centre Of India (COMMUNIST)"
+    },
+    {
+      "name": "BABITA YADAV",
+      "status": "trailing",
+      "gap": -650947,
+      "voteCount": 492,
+      "party": "Aazad Samaj Party (Kanshi Ram)"
+    },
+    {
+      "name": "LAKSHYA VASHIST (SHYAM)",
+      "status": "trailing",
+      "gap": -650952,
+      "voteCount": 487,
+      "party": "Jindabad Kranti Party"
+    },
+    {
+      "name": "MANOJ KUMAR",
+      "status": "trailing",
+      "gap": -651014,
+      "voteCount": 425,
+      "party": "Independent"
+    },
+    {
+      "name": "DR. RAJESH KUMAR SINGH",
+      "status": "trailing",
+      "gap": -651030,
+      "voteCount": 409,
+      "party": "Independent"
+    },
+    {
+      "name": "NIVEDITA SHARMA “PREM”",
+      "status": "trailing",
+      "gap": -651034,
+      "voteCount": 405,
+      "party": "Rashtrawadi Janlok Party (Satya)"
+    },
+    {
+      "name": "KANHI LAL",
+      "status": "trailing",
+      "gap": -651041,
+      "voteCount": 398,
+      "party": "Swatantra Jantaraj Party"
+    },
+    {
+      "name": "VIJAY KUMAR JHA",
+      "status": "trailing",
+      "gap": -651073,
+      "voteCount": 366,
+      "party": "Independent"
+    },
+    {
+      "name": "YOGESH SWAMY",
+      "status": "trailing",
+      "gap": -651105,
+      "voteCount": 334,
+      "party": "Independent"
+    },
+    {
+      "name": "ASHOK MISHRA",
+      "status": "trailing",
+      "gap": -651164,
+      "voteCount": 275,
+      "party": "Independent"
+    },
+    {
+      "name": "ADV. K.T. PALUSKAR",
+      "status": "trailing",
+      "gap": -651190,
+      "voteCount": 249,
+      "party": "Prabuddha Republican Party"
+    },
+    {
+      "name": "RAVI KIRAN THILAK THATIKONDA",
+      "status": "trailing",
+      "gap": -651196,
+      "voteCount": 243,
+      "party": "Independent"
+    },
+    {
+      "name": "ISHWAR CHAND",
+      "status": "trailing",
+      "gap": -651209,
+      "voteCount": 230,
+      "party": "Bharatrashtra Democratic Party"
+    },
+    {
+      "name": "JAGDISH",
+      "status": "trailing",
+      "gap": -651225,
+      "voteCount": 214,
+      "party": "Rashtriya Samaj Paksha"
+    },
+    {
+      "name": "BIRPAL SINGH KOLI",
+      "status": "trailing",
+      "gap": -651226,
+      "voteCount": 213,
+      "party": "Independent"
+    },
+    {
+      "name": "NOTA",
+      "status": null,
+      "gap": 0,
+      "voteCount": 4566,
+      "party": "None of the Above"
+    }
+  ]
+}

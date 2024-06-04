@@ -190,14 +190,16 @@ const getStateData = async (stateName) => {
 
 const getConstituencyData = async (constituencyName) => {
   let constituencyFound = null;
-  STATES.forEach((state) => {
+  for (let index = 0; index < STATES.length; index++) {
+    const state = STATES[index];
     const found = state.constituencies.find((c) =>
-      c.name.toLowerCase().includes(constituencyName)
+      c.name.toLowerCase().includes(constituencyName.toLowerCase())
     );
     if (found) {
       constituencyFound = found;
+      break;
     }
-  });
+  }
 
   if (!constituencyFound) {
     console.error(`Constituency ${constituencyFound} not found!`);
