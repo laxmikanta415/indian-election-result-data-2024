@@ -1,0 +1,103 @@
+{
+  "code": "U01",
+  "name": "Andaman &amp; Nicobar Islands",
+  "constituencies": [
+    {
+      "code": "U011",
+      "name": "Andaman &amp; Nicobar Islands - 1",
+      "candidates": [
+        {
+          "name": "BISHNU PADA RAY",
+          "status": "leading",
+          "gap": 23270,
+          "voteCount": 58368,
+          "party": "Bharatiya Janata Party"
+        },
+        {
+          "name": "KULDEEP RAI SHARMA",
+          "status": "trailing",
+          "gap": -23270,
+          "voteCount": 35098,
+          "party": "Indian National Congress"
+        },
+        {
+          "name": "MANOJ PAUL",
+          "status": "trailing",
+          "gap": -51858,
+          "voteCount": 6510,
+          "party": "Andaman Nicobar Democratic Congress"
+        },
+        {
+          "name": "D AYYAPPAN",
+          "status": "trailing",
+          "gap": -54995,
+          "voteCount": 3373,
+          "party": "Communist Party of India  (Marxist)"
+        },
+        {
+          "name": "V.K. ABDUL AZIZ",
+          "status": "trailing",
+          "gap": -57501,
+          "voteCount": 867,
+          "party": "Independent"
+        },
+        {
+          "name": "K J B SELVARAJ",
+          "status": "trailing",
+          "gap": -57880,
+          "voteCount": 488,
+          "party": "All India Anna Dravida Munnetra Kazhagam"
+        },
+        {
+          "name": "DR ARUN KUMAR MALLIK",
+          "status": "trailing",
+          "gap": -58017,
+          "voteCount": 351,
+          "party": "Bahujan Samaj Party"
+        },
+        {
+          "name": "RINKU MALA MONDAL",
+          "status": "trailing",
+          "gap": -58143,
+          "voteCount": 225,
+          "party": "Independent"
+        },
+        {
+          "name": "K VENKAT RAM BABU",
+          "status": "trailing",
+          "gap": -58151,
+          "voteCount": 217,
+          "party": "Independent"
+        },
+        {
+          "name": "SALAMAT MONDAL",
+          "status": "trailing",
+          "gap": -58186,
+          "voteCount": 182,
+          "party": "Socialist Unity Centre Of India (COMMUNIST)"
+        },
+        {
+          "name": "USHA KUMARI",
+          "status": "trailing",
+          "gap": -58208,
+          "voteCount": 160,
+          "party": "Independent"
+        },
+        {
+          "name": "ANAND RAMNATH ARLEKAR",
+          "status": "trailing",
+          "gap": -58214,
+          "voteCount": 154,
+          "party": "Independent"
+        },
+        {
+          "name": "NOTA",
+          "status": null,
+          "gap": 0,
+          "voteCount": 929,
+          "party": "None of the Above"
+        }
+      ]
+    }
+  ]
+}
