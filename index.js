@@ -1,6 +1,7 @@
 const { JSDOM } = require("jsdom");
 const axios = require("axios");
 const fs = require("fs");
+const argumentReader = require("minimist");
 const { STATES } = require("./state-constituencies");
 
 async function fetchHTML(url) {
@@ -78,7 +79,7 @@ const getAndSaveStateConstituencies = async () => {
   fs.writeFileSync("output.json", JSON.stringify(STATE_CODES));
 };
 
-(async () => {
+const getIndiaData = async () => {
   for (let index = 0; index < STATES.length; index++) {
     const state = STATES[index];
     for (let j = 0; j < state.constituencies.length; j++) {
@@ -127,5 +128,135 @@ const getAndSaveStateConstituencies = async () => {
       `./election-result/${state.name}.json`,
       JSON.stringify(state)
     );
+  }
+};
+
+const getStateData = async (stateName) => {
+  const stateFound = STATES.find((state) =>
+    state.name.toLowerCase().includes(stateName.toLowerCase())
+  );
+  if (!stateFound) {
+    console.error(`State ${stateName} not found!`);
+    return;
+  }
+  const state = stateFound;
+  for (let j = 0; j < state.constituencies.length; j++) {
+    const constituency = state.constituencies[j];
+    console.log("COLLECTING constituency: ", constituency.name);
+    const pageHTML = await fetchHTML(
+      `https://results.eci.gov.in/PcResultGenJune2024/candidateswise-${constituency.code}.htm`
+    );
+    const dom = new JSDOM(pageHTML);
+    const candidates = Array.from(
+      dom.window.document.querySelectorAll(".cand-box")
+    );
+    for (let k = 0; k < candidates.length; k++) {
+      const candidate = candidates[k];
+      const statsText = candidate.childNodes[3].childNodes[1].textContent
+        .trim()
+        .replace(/\s+/g, " ");
+      const statsArr = statsText.split(" ");
+      const status = statsArr.splice(0, 1)[0];
+      const currentCount = +statsArr.splice(0, 1)[0];
+      const offset = +statsArr.join("").replace("(", "").replace(")", "");
+      const candidateName =
+        candidate.childNodes[3].childNodes[3].childNodes[1].innerHTML;
+      const candidatePartyName =
+        candidate.childNodes[3].childNodes[3].childNodes[3].innerHTML;
+      if (candidateName === "NOTA") {
+        constituency.candidates.push({
+          name: candidateName,
+          status: null,
+          gap: 0,
+          voteCount: +status,
+          party: candidatePartyName,
+        });
+      } else {
+        constituency.candidates.push({
+          name: candidateName,
+          status: status,
+          gap: offset,
+          voteCount: currentCount,
+          party: candidatePartyName,
+        });
+      }
+    }
+  }
+  fs.writeFileSync(
+    `./election-result/${state.name}.json`,
+    JSON.stringify(state)
+  );
+};
+
+const getConstituencyData = async (constituencyName) => {
+  let constituencyFound = null;
+  STATES.forEach((state) => {
+    const found = state.constituencies.find((c) =>
+      c.name.toLowerCase().includes(constituencyName)
+    );
+    if (found) {
+      constituencyFound = found;
+    }
+  });
+
+  if (!constituencyFound) {
+    console.error(`Constituency ${constituencyFound} not found!`);
+    return;
+  }
+
+  const constituency = constituencyFound;
+  console.log("COLLECTING constituency: ", constituency.name);
+  const pageHTML = await fetchHTML(
+    `https://results.eci.gov.in/PcResultGenJune2024/candidateswise-${constituency.code}.htm`
+  );
+  const dom = new JSDOM(pageHTML);
+  const candidates = Array.from(
+    dom.window.document.querySelectorAll(".cand-box")
+  );
+  for (let k = 0; k < candidates.length; k++) {
+    const candidate = candidates[k];
+    const statsText = candidate.childNodes[3].childNodes[1].textContent
+      .trim()
+      .replace(/\s+/g, " ");
+    const statsArr = statsText.split(" ");
+    const status = statsArr.splice(0, 1)[0];
+    const currentCount = +statsArr.splice(0, 1)[0];
+    const offset = +statsArr.join("").replace("(", "").replace(")", "");
+    const candidateName =
+      candidate.childNodes[3].childNodes[3].childNodes[1].innerHTML;
+    const candidatePartyName =
+      candidate.childNodes[3].childNodes[3].childNodes[3].innerHTML;
+    if (candidateName === "NOTA") {
+      constituency.candidates.push({
+        name: candidateName,
+        status: null,
+        gap: 0,
+        voteCount: +status,
+        party: candidatePartyName,
+      });
+    } else {
+      constituency.candidates.push({
+        name: candidateName,
+        status: status,
+        gap: offset,
+        voteCount: currentCount,
+        party: candidatePartyName,
+      });
+    }
+  }
+  fs.writeFileSync(
+    `./constituency-result/${constituency.name}.json`,
+    JSON.stringify(constituency)
+  );
+};
+
+(async () => {
+  const argv = argumentReader(process.argv.slice(2));
+  if (argv.state) {
+    await getStateData(argv.state);
+  } else if (argv.constituency) {
+    await getConstituencyData(argv.constituency);
+  } else {
+    await getIndiaData();
   }
 })();
